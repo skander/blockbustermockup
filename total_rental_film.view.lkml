@@ -10,6 +10,7 @@ view: total_rental_film {
        ON film.film_id = inventory.inventory_id
        INNER JOIN sakila.rental rental
        ON rental.inventory_id = inventory.inventory_id
+       AND film.film_id < 200
        group by 1,2
   ;;
     }

@@ -1,7 +1,7 @@
 view: total_rental {
   derived_table: {
     persist_for: "1 hour"
-    indexes: ["customer_id"]
+    indexes: ["total_customer"]
     sql: SELECT count(distinct rental.customer_id) as total_customer
         from sakila.rental rental ;;
 }
